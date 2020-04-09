@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>JS Module </title>
+        <link rel="stylesheet" href="module.css" />
+    </head>
+    <body>
+        <h2>Arrays in Javascript</h2>
+        <p id='firstName'>
+            User name:
+        </p>
+
+        <p>Input Array:
+            <span id="inputDisplay"></span>
+        </p>
+
+        <p>Output Array:
+            <span id="outputDisplay"></span>
+        </p>
+
+       
+        <button onclick="additionFun(3)">addition by 3</button>
+        <button onclick="additionFun(5)">addition by 5</button>
+        <script>
+        var array1=[3,6,9,12];
+        var array2;
+
+        var user = { 
+
+            "postOwner": {
+
+                "firstName": "Rachana",
+                "lastName": "Pambala",
+                "age": 21,
+                "isIndian": true
+
+            },
+
+           "likedUser" : {
+                "firstName": "Durga Bhavani",
+                "lastName": "sanka",
+                "age": 25,
+                "isIndian": false,
+                "Flowers" : ["sunflower", "rose", "lilly"]
+            }
+
+           
+        }
+
+
+
+        var FlowersArray = user.likedUser.Flowers;
+
+
+            document.getElementById('firstName').innerHTML += user.likedUser['firstName']
+
+
+
+
+        document.getElementById('inputDisplay').innerHTML = array1;
+        
+        array2 = array1.map(param1 =>  param1 + 3)
+        array2 = array1.map(param1 =>  param1 + 5)
+
+        document.getElementById('outputDisplay').innerHTML = array2;
+
+        function additionFun(addNum){
+            array2 = array2.map(param1 => param1 + addNum)
+            document.getElementById('outputDisplay').innerHTML = array2;
+            
+         
+          
+            
+        }
+
+    </script>
+    </body>
+</html>
